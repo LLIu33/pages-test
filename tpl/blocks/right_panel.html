@@ -1,0 +1,49 @@
+<div class="quickview-wrapper builder hidden-sm hidden-xs" id="builder">
+    <div class="p-l-30 p-r-30 ">
+        <a class="builder-close quickview-toggle pg-close" data-toggle="quickview" data-toggle-element="#builder" href=""></a>
+        <a class="builder-toggle" data-toggle="quickview" data-toggle-element="#builder"><i class="pg pg-theme"></i></a>
+        <div class="panel panel-transparent" ng-controller="AngularUITableCtrl">
+            <div class="panel-heading">
+                <div class="panel-title">Status</div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="panel-body">
+                <div id="grid1" ui-grid="gridOptions" class="grid" ng-if="gridOptions" ></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+
+  #grid1 {
+    width: 500px;
+    height: 450px;
+  }
+
+  #grid11 .ui-grid-header-cell {
+    -moz-transform: rotate(90.0deg);  /* FF3.5+ */
+       -o-transform: rotate(90.0deg);  /* Opera 10.5 */
+  -webkit-transform: rotate(90.0deg);  /* Saf3.1+, Chrome */
+  }
+
+  .circle-Green,
+  .circle-Red,
+  .circle-Yellow {
+      width: 24px;
+      height: 24px;
+      -webkit-border-radius: 12px;
+      -moz-border-radius: 12px;
+      border-radius: 12px;
+      background: green;
+    }
+
+    .circle-Red {
+      background: red;
+    }
+
+    .circle-Yellow {
+      background: yellow;
+    }
+  }
+</style>

@@ -1,7 +1,7 @@
 /* ============================================================
  * File: config.lazyload.js
- * Configure modules for ocLazyLoader. These are grouped by 
- * vendor libraries. 
+ * Configure modules for ocLazyLoader. These are grouped by
+ * vendor libraries.
  * ============================================================ */
 
 angular.module('app')
@@ -221,6 +221,12 @@ angular.module('app')
                         'assets/plugins/datatables-responsive/js/lodash.min.js'
                     ],
                     serie: true // load in the exact order
+                }, {
+                    name: 'ui-grid',
+                    files: [
+                        'assets/plugins/angular-ui-grid/ui-grid.min.css',
+                        'assets/plugins/angular-ui-grid/ui-grid.min.js']
+
                 }, {
                     name: 'google-map',
                     files: [
