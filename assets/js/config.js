@@ -16,6 +16,10 @@ angular.module('app')
                     url: "/app",
                     templateUrl: "tpl/app.html"
                 })
+                .state('app.statistics', {
+                    url: "/statistics",
+                    templateUrl: "tpl/statistics.html"
+                })
                 .state('app.dashboard', {
                     url: "/home",
                     templateUrl: "tpl/home.html",
@@ -23,7 +27,7 @@ angular.module('app')
                     resolve: {
                         deps: ['$ocLazyLoad', function($ocLazyLoad) {
                             return $ocLazyLoad.load([
-                                    /* 
+                                    /*
                                         Load any ocLazyLoad module here
                                         ex: 'wysihtml5'
                                         Open config.lazyload.js for available modules

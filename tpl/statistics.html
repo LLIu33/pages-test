@@ -1,0 +1,47 @@
+<div class="jumbotron" data-pages="parallax">
+    <div class="container-fluid container-fixed-lg sm-p-l-20 sm-p-r-20">
+        <div class="inner">
+            <!-- START BREADCRUMB -->
+            <ul class="breadcrumb">
+                <li>
+                    <a href="#">Dashboard</a>
+                </li>
+                <li>
+                    <a href="#">Production</a>
+                </li>
+                <li><a class="active" href="#">Status</a>
+                </li>
+            </ul>
+            <!-- END BREADCRUMB -->
+        </div>
+    </div>
+</div>
+<div class="container-fluid container-fixed-lg">
+  <h1 class="page-title">OUR STATISTICS</h1>
+  <h5>A subtitle will go here</h5>
+</div>
+
+<div class="jumbotron">
+  <br />
+  <div id="testA"></div>
+</div>
+
+<script>
+  webix.ready(function(){
+    var grid = webix.ui({
+      view: "pivot",
+      container: "testA",
+      height:600,
+      width: 1600,
+      id: "pivot",
+      url: "./assets/js/api/pivot.json",
+      max: true,
+      structure: {
+          rows: ["form", "name"],
+          columns: ["year"],
+          values: [{ name:"gdp", operation:"sum"}, { name:"oil", operation:"sum"}],
+          filters:[]
+      },
+    });
+  });
+</script>
