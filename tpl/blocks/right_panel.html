@@ -4,7 +4,7 @@
         <a class="builder-toggle" data-toggle="quickview" data-toggle-element="#builder"><i class="pg pg-theme"></i></a>
         <div class="panel panel-transparent" ng-controller="AngularUITableCtrl">
             <div class="panel-heading">
-                <div class="panel-title">Status</div>
+                <div class="panel-title">Training status</div><i class="fa fa-refresh" aria-hidden="true"></i>
                 <div class="clearfix"></div>
             </div>
             <div class="panel-body">
@@ -21,10 +21,26 @@
     height: 450px;
   }
 
-  #grid11 .ui-grid-header-cell {
+  #grid1 .ui-grid-column-menu-button {
+    display: none;
+  }
+
+  #grid1 .ui-grid-header {
+    color: black;
+    border: none;
+    line-height: 50px;
+  }
+
+  #grid1 .ui-grid-row:nth-child(even) .ui-grid-cell,
+  #grid1 .ui-grid-row:nth-child(odd) .ui-grid-cell {
+    background: inherit;
+  }
+
+  #grid11 .ui-grid-cell-contents {
+    height: 150px;
     -moz-transform: rotate(90.0deg);  /* FF3.5+ */
-       -o-transform: rotate(90.0deg);  /* Opera 10.5 */
-  -webkit-transform: rotate(90.0deg);  /* Saf3.1+, Chrome */
+    -o-transform: rotate(90.0deg);  /* Opera 10.5 */
+    -webkit-transform: rotate(90.0deg);  /* Saf3.1+, Chrome */
   }
 
     #grid1 .ui-grid-cell-contents {
@@ -39,15 +55,15 @@
       -webkit-border-radius: 12px;
       -moz-border-radius: 12px;
       border-radius: 12px;
-      background: green;
+      background: #00B200;
     }
 
     .circle-Red {
-      background: red;
+      background: #D72828;
     }
 
     .circle-Yellow {
-      background: yellow;
+      background: #FFFF00;
     }
   }
 </style>
